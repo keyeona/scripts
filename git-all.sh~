@@ -5,6 +5,10 @@ echo "$1"
 # store the current dir
 CUR_DIR=$(pwd)
 USAGE=$(cat <<EOL
+
+Use this script to update a set of repos in a directory. Place this script in the parent directory that contain git repositories. 
+
+
     git-all argument
 
     ######## arguments ########
@@ -30,9 +34,7 @@ git_pull_origin_master()
         cd ..;
     
         # finally pull
-    #    git fetch origin
-    #    git reset --hard origin/master
-    #    git pull origin master;
+        git pull origin master;
        
         # lets get back to the CUR_DIR
         cd $CUR_DIR
@@ -54,7 +56,7 @@ git_status () {
         cd "$i";
         cd ..;
 
-        # finally pull
+        # ok git status 
         git status
 
         # lets get back to the CUR_DIR
@@ -78,8 +80,8 @@ got_reset_hard_origin_master()
         cd "$i";
         cd ..;
 
-        # finally pull
-        git status
+        # finally hard reset
+        git reset hard origin/master
 
         # lets get back to the CUR_DIR
         cd $CUR_DIR

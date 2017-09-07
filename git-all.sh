@@ -5,6 +5,10 @@ echo "$1"
 # store the current dir
 CUR_DIR=$(pwd)
 USAGE=$(cat <<EOL
+
+Use this script to update a set of repos in a directory. Place this script in the parent directory that contains the  git repositories. 
+
+
     git-all argument
 
     ######## arguments ########
